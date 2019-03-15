@@ -7,17 +7,17 @@
   
   <title>確率分布まとめ | supercell&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ベルヌーイ分布 離散確率分布 二値をとる変数を生成する $x \in {0, 1}, \mu \in (0, 1)$ 同時に起こらない二つの事象を扱うときに用いる  $$Bern(x|\mu) = \mu^x (1 - \mu)^{1 -x}$$ ベータ分布 連続確率分布 $\mu \in (0, 1)$となる変数を生成してくれる  $$Beta(\mu|a, b) = C_B(a, b)\mu^">
+  <meta name="description" content="ベルヌーイ分布  離散確率分布 二値をとる変数を生成する \(x \in \{0, 1\}, \mu \in (0, 1)\) 同時に起こらない二つの事象を扱うときに用いる  \[ Bern(x|\mu) = \mu^x (1 - \mu)^{1 -x} \] ベータ分布  連続確率分布 \(\mu \in (0, 1)\)となる変数を生成してくれる  \[ Bet">
 <meta property="og:type" content="article">
 <meta property="og:title" content="確率分布まとめ">
 <meta property="og:url" content="https://supercel1.github.io/2019/03/13/確率分布まとめ/index.html">
 <meta property="og:site_name" content="supercell&#39;s blog">
-<meta property="og:description" content="ベルヌーイ分布 離散確率分布 二値をとる変数を生成する $x \in {0, 1}, \mu \in (0, 1)$ 同時に起こらない二つの事象を扱うときに用いる  $$Bern(x|\mu) = \mu^x (1 - \mu)^{1 -x}$$ ベータ分布 連続確率分布 $\mu \in (0, 1)$となる変数を生成してくれる  $$Beta(\mu|a, b) = C_B(a, b)\mu^">
+<meta property="og:description" content="ベルヌーイ分布  離散確率分布 二値をとる変数を生成する \(x \in \{0, 1\}, \mu \in (0, 1)\) 同時に起こらない二つの事象を扱うときに用いる  \[ Bern(x|\mu) = \mu^x (1 - \mu)^{1 -x} \] ベータ分布  連続確率分布 \(\mu \in (0, 1)\)となる変数を生成してくれる  \[ Bet">
 <meta property="og:locale" content="ja">
-<meta property="og:updated_time" content="2019-03-13T12:12:31.388Z">
+<meta property="og:updated_time" content="2019-03-15T03:10:43.070Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="確率分布まとめ">
-<meta name="twitter:description" content="ベルヌーイ分布 離散確率分布 二値をとる変数を生成する $x \in {0, 1}, \mu \in (0, 1)$ 同時に起こらない二つの事象を扱うときに用いる  $$Bern(x|\mu) = \mu^x (1 - \mu)^{1 -x}$$ ベータ分布 連続確率分布 $\mu \in (0, 1)$となる変数を生成してくれる  $$Beta(\mu|a, b) = C_B(a, b)\mu^">
+<meta name="twitter:description" content="ベルヌーイ分布  離散確率分布 二値をとる変数を生成する \(x \in \{0, 1\}, \mu \in (0, 1)\) 同時に起こらない二つの事象を扱うときに用いる  \[ Bern(x|\mu) = \mu^x (1 - \mu)^{1 -x} \] ベータ分布  連続確率分布 \(\mu \in (0, 1)\)となる変数を生成してくれる  \[ Bet">
   
     <link rel="alternate" href="/atom.xml" title="supercell&#39;s blog" type="application/atom+xml">
   
@@ -86,22 +86,38 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="ベルヌーイ分布"><a href="#ベルヌーイ分布" class="headerlink" title="ベルヌーイ分布"></a>ベルヌーイ分布</h2><ul>
+        <h2 id="ベルヌーイ分布">ベルヌーイ分布</h2>
+<ul>
 <li>離散確率分布</li>
 <li>二値をとる変数を生成する</li>
-<li>$x \in {0, 1}, \mu \in (0, 1)$</li>
+<li><span class="math inline">\(x \in \{0, 1\}, \mu \in (0, 1)\)</span></li>
 <li>同時に起こらない二つの事象を扱うときに用いる</li>
 </ul>
-<p>$$<br>Bern(x|\mu) = \mu^x (1 - \mu)^{1 -x}<br>$$</p>
-<h2 id="ベータ分布"><a href="#ベータ分布" class="headerlink" title="ベータ分布"></a>ベータ分布</h2><ul>
-<li>連続確率分布</li>
-<li>$\mu \in (0, 1)$となる変数を生成してくれる</li>
-</ul>
-<p>$$<br>Beta(\mu|a, b) = C_B(a, b)\mu^{a-1}(1 -\mu)^{b-1}<br>$$</p>
+<p><span class="math display">\[
+Bern(x|\mu) = \mu^x (1 - \mu)^{1 -x}
+\]</span></p>
+<h2 id="ベータ分布">ベータ分布</h2>
 <ul>
-<li>$a, b \in \mathbb{R}$</li>
-<li>$C_B (a, b) = \frac{\Gamma{(a+b)}}{\Gamma{(a)} \Gamma{(b)}}$<br>正規化するための項</li>
+<li>連続確率分布</li>
+<li><span class="math inline">\(\mu \in (0, 1)\)</span>となる変数を生成してくれる</li>
 </ul>
+<p><span class="math display">\[
+Beta(\mu|a, b) = C_B(a, b)\mu^{a-1}(1 -\mu)^{b-1}
+\]</span></p>
+<ul>
+<li><span class="math inline">\(a, b \in \mathbb{R}\)</span></li>
+<li><span class="math inline">\(C_B (a, b) = \frac{\Gamma{(a+b)}}{\Gamma{(a)} \Gamma{(b)}}\)</span> 正規化するための項</li>
+</ul>
+<h2 id="ガウス分布">ガウス分布</h2>
+<ul>
+<li>連続確率分布</li>
+<li><span class="math inline">\(x \in \mathbb{R}\)</span>となる変数を生成してくれる</li>
+<li><span class="math inline">\(\mu \in \mathbb{R}\)</span>：平均パラメータ</li>
+<li><span class="math inline">\(\sigma^2 \in \mathbb{R}\)</span>：分散パラメータ</li>
+</ul>
+<p><span class="math display">\[
+\mathcal{N}(x|\mu,\sigma^2) = \frac{1}{\sqrt{2\pi \sigma^2}}exp\{-\frac{(x-\mu)^2}{2\sigma^2}\} 
+\]</span></p>
 
       
     </div>

@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="supercell&#39;s blog">
 <meta property="og:description" content="前提  事前分布：ベータ分布 事後分布：ベルヌーイ分布 \(\boldsymbol{x}\)：観測したデータ集合 \(\mu\)：\(\mu \in (0, 1)\)をみたすパラメータ  計算 ベイズ学習ではすべての変数は確率変数として計算していきます。そのため、上記のような前提を設けてパラメータを求めていきたいと思います。 目標：ベータ分布のパラメータ\(a, b\)をどのよう">
 <meta property="og:locale" content="ja">
-<meta property="og:updated_time" content="2019-03-13T14:36:41.424Z">
+<meta property="og:updated_time" content="2019-03-14T05:04:11.315Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ベイズ学習計算練習">
 <meta name="twitter:description" content="前提  事前分布：ベータ分布 事後分布：ベルヌーイ分布 \(\boldsymbol{x}\)：観測したデータ集合 \(\mu\)：\(\mu \in (0, 1)\)をみたすパラメータ  計算 ベイズ学習ではすべての変数は確率変数として計算していきます。そのため、上記のような前提を設けてパラメータを求めていきたいと思います。 目標：ベータ分布のパラメータ\(a, b\)をどのよう">
@@ -125,7 +125,7 @@ p(\mu|\boldsymbol{x}) \propto \{\prod_{i=1}^n p(x_i|\mu)\}p(\mu)
 <p><span class="math display">\[
 p(\mu|\boldsymbol{x}) = Beta(\mu|\hat{a}, \hat{b})
 \]</span></p>
-<p>と表せます。つまり、前提のように確率分布を定めると更新するべきパラメータの値を求めることができるようになるのです。</p>
+<p>と表せます。つまり、前提のように確率分布を定めると更新するべきパラメータの値を求めることができるようになるのです。このように事後分布と事前分布が等しくなるように設定された事前分布を<strong>共役事前分布</strong>と呼びます。</p>
 <hr>
 <p>※解析的に計算できるのは特殊であり、計算できない場合は様々な近似法を用いることになります。</p>
 
