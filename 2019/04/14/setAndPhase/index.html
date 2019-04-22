@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="supercell&#39;s blog">
 <meta property="og:description" content="集合と位相 熱伝導の微分方程式 フーリエが考え出した簡単な熱伝導の微分方程式からフーリエ級数を導いてみましょう \[ \frac{\partial u}{\partial t} = \frac{\partial^2 u}{\partial x^2} \] ここで、時間を\(t\)、ある長さ\(x\)の棒の温度を\(u(x, t)\)と置いています この微分方程式を解いていきましょう。">
 <meta property="og:locale" content="ja">
-<meta property="og:updated_time" content="2019-04-14T13:13:22.403Z">
+<meta property="og:updated_time" content="2019-04-22T02:36:47.579Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Set And Phase">
 <meta name="twitter:description" content="集合と位相 熱伝導の微分方程式 フーリエが考え出した簡単な熱伝導の微分方程式からフーリエ級数を導いてみましょう \[ \frac{\partial u}{\partial t} = \frac{\partial^2 u}{\partial x^2} \] ここで、時間を\(t\)、ある長さ\(x\)の棒の温度を\(u(x, t)\)と置いています この微分方程式を解いていきましょう。">
@@ -105,7 +105,11 @@ u(0, t) = u(\pi, t) = 0
 <p><span class="math display">\[
 u(x, 0) = f(x) \quad (0 \leq x \le \pi)
 \]</span></p>
-<p>フーリエは熱伝導方程式の性質 - 解<span class="math inline">\(u_1\)</span>, <span class="math inline">\(u_2\)</span>が存在するとき、<span class="math inline">\(u_1+u_2\)</span>も解となる - 解<span class="math inline">\(u_1\)</span>が存在するとき、定数倍<span class="math inline">\(ku\)</span>も解となる</p>
+<p>フーリエは熱伝導方程式の性質</p>
+<ul>
+<li>解<span class="math inline">\(u_1\)</span>, <span class="math inline">\(u_2\)</span>が存在するとき、<span class="math inline">\(u_1+u_2\)</span>も解となる</li>
+<li>解<span class="math inline">\(u_1\)</span>が存在するとき、定数倍<span class="math inline">\(ku\)</span>も解となる</li>
+</ul>
 <p>をみたすことを利用して解を求めることにしました。</p>
 <ul>
 <li>まず境界条件を満たす簡単な形の解を求める</li>
@@ -130,6 +134,35 @@ v = B\sin (nx + \theta)
 e^{-n^2t}\sin(nx) \quad (n = 1, 2, 3, \cdots)
 \]</span></p>
 <p>となります（また、この定数倍）</p>
+<hr>
+<p>得られた簡単な解を足し合わせることで初期条件をみたす解を求めてみましょう。</p>
+<p><span class="math display">\[
+\sum_{n=1}^N b_n e^{-n^2t}\sin(nx)
+\]</span></p>
+<p>まずは、<span class="math inline">\(N\)</span>が有限である場合は上記の式になります。ここでフーリエは<span class="math inline">\(N \rightarrow \infty\)</span>である場合、つまり</p>
+<p><span class="math display">\[
+u(x, t) = \sum_{n=1}^{\infty} b_n e^{-n^2t}\sin(nx)
+\]</span></p>
+<p>も境界条件をみたすだろうと考えました。</p>
+<p>初期条件をみたすには<span class="math inline">\(t = 0\)</span>として、</p>
+<p><span class="math display">\[
+f(x) = \sum_{n=1}^{\infty} b_n \sin(nx)
+\]</span></p>
+<p>となり、<span class="math inline">\(f(x)\)</span>が三角関数の和として表されることになります。</p>
+<p>有限和である場合に、両辺に<span class="math inline">\(\sin kx\)</span>をかけて<span class="math inline">\(0\)</span>から<span class="math inline">\(\pi\)</span>まで積分すると、</p>
+<p><span class="math display">\[
+\int_0^{\pi} \sin nx \sin kx = \frac{\pi}{2} \quad (k = nのとき) 
+\]</span></p>
+<p>であるから、</p>
+<p><span class="math display">\[
+n\int_0^{\pi} f(x)\sin kx = \frac{n\pi}{2} b_n
+\]</span></p>
+<p><span class="math inline">\(n\)</span>を消去して、</p>
+<p><span class="math display">\[
+b_n = \frac{2}{\pi}\int_0^{\pi}f(x)\sin kx 
+\]</span></p>
+<p>となります。</p>
+<p>与えられた関数<span class="math inline">\(f(x)\)</span>によって係数<span class="math inline">\(b_n\)</span>が定まることがわかりました。得られた三角関数の和を<span class="math inline">\(f(x)\)</span>の<strong>フーリエ級数</strong>と呼びます。</p>
 
       
     </div>
